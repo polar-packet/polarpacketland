@@ -1,5 +1,7 @@
 ---
 title: 4 Powerful Applications of Data Analytics in E-commerce
+publishDate: 2024-09-07T16:00:00.000Z
+category: news
 ---
 
 Imagine if you could read the minds of your customer to predict what products they wanted and at which price point to maximise your sales.
@@ -11,7 +13,7 @@ It allows you to spot gaps and issues, and dive deep into the facts so you can m
 Data analytics can help e-commerce businesses to predict upcoming peaks and troughs so that they know which products to focus on, whether inventory needs to be adjusted, which marketing strategies need to be deployed, and which products to put into clearance.
 This will ensure that your supply chain is prepared and your customer expectations are met.
 \### Personalise customer experience
-Did you know that \[83% of customers]\(https\://www\.accenture.com/\_acnmedia/PDF-77/Accenture-Pulse-Survey.pdf) are willing to share their data to create a more personalised experience? This is why you are optimising your value when you can sell to the same customer more than once.
+Did you know that [83% of customers](https://www.accenture.com/_acnmedia/PDF-77/Accenture-Pulse-Survey.pdf) are willing to share their data to create a more personalised experience? This is why you are optimising your value when you can sell to the same customer more than once.
 Data analytics can determine what a customer is interested in buying with a high level of accuracy. Every time someone clicks on a product, if they see other products recommended, there is a high chance that they will explore and possibly buy something in addition to their original cart.
 \### Optimise pricing
 Pricing is a major factor that drives purchasing decisions in e-commerce because you have millions of competitor product options online. The prices you set will directly influence your product sales.
@@ -22,4 +24,4 @@ Data analytics can give insights into why they didn’t convert and suggest effe
 \## The Bottom Line
 Data is an incredibly powerful tool in e-commerce to always stay one step ahead of your competition.
 But how do you interpret this vast volume of information to get the most out of it?
-Our data experts here at Polar Packet can help you to utilise data to your advantage. Learn more \[\*\*here\*\*]\(https\://polarpacket.com/).
+Our data experts here at Polar Packet can help you to utilise data to your advantage. Learn more \*\*[here](https://polarpacket.com/)\*\*

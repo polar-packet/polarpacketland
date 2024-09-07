@@ -1,6 +1,7 @@
 ---
 title: 4 Powerful Applications of Data Analytics in E-commerce
 publishDate: 2024-09-07T16:00:00.000Z
+image: /mark-konig-tl8mdaue_ii-unsplash.jpg
 category: news
 ---
 

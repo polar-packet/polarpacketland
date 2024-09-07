@@ -16,9 +16,8 @@ const metadata = {
 
   <Hero
     tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    title="Digitalise your business with data solutions"
+    subtitle="Explore the services we cater to our clients around Asia Pacific and hear from us on how we have brought forth data backed business solutions."
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'AstroWind Hero Image',
@@ -28,61 +27,44 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+    title="Explore our diverse solutions"
+    subtitle="Discover the client portfolios and what we offer."
     columns={3}
     items={[
       {
-        title: 'Educational',
+        title: 'Resource Outsourcing',
         description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
+          'Offering shared services and allocated resources to our clients to suppliment and outsource data engineering, data analytics and data science capabilities.',
         icon: 'tabler:school',
       },
       {
-        title: 'Interior Design',
+        title: 'Food & Beverage',
         description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
-      },
-      {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
-        description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
-      },
-      {
-        title: 'Blog',
-        description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
-      },
-      {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
+          'Conducting engines and models for inventory management and resource planning capabilities for the kitchen staff and food stocks/ orders.',
         icon: 'tabler:arrow-big-up-lines',
       },
       {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
+        title: 'Property',
+        description: `Utilising Machine Learning models to build pricing models for units and enabling value added services to their clients through data enrichment in the property portals.`,
+        icon: 'tabler:home-star',
       },
       {
-        title: 'Fashion Design',
+        title: 'Human Resource',
         description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
+          'Providing models and engines that matches candidates and available jobs through AI and Machine Learning algorithms.',
         icon: 'tabler:tie',
+      },
+      {
+        title: 'Freelance Platforms',
+        description:
+          'Providing resource planning capabilities for the B2B clients and enabling analytics as a B2B data product to their clients to monitor and plan campaigns.',
+        icon: 'tabler:article',
+      },
+      {
+        title: 'Web Analytics',
+        description:
+          'Helping our clients setup web analytics platforms, ie Google Analytics, GTM, Segment, Amplitude and so forth and providing reporting and dashboarding solutions for our clients.',
+        icon: 'tabler:building-store',
       },
     ]}
   />
@@ -90,71 +72,25 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
-    isReversed
-    items={[
-      {
-        title: 'High-Quality Designs',
-        description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Customization Tools',
-        description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Pre-Designed Elements',
-        description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
-      },
-      {
-        title: 'Preview and Mockup Views',
-        description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
     isAfterContent
     items={[
       {
-        title: 'Time Savings',
+        title: 'Started by the people who built the digital age',
         description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
+          'After leading data teams in Asia’s top tech firms, we identified common challenges: startups lack resources, and large corporations struggle to scale. Polar Packet bridges this gap by providing scalable data solutions for growing organizations.',
         icon: 'tabler:clock',
       },
       {
-        title: 'Professional Appearance',
+        title: 'Shared Service',
         description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
+          'We work across a few notable clients at the same time, managing our resources to where we are needed the most, we scale up operations with you when the requests are tougher and shift accordingly.',
         icon: 'tabler:school',
       },
       {
         title: 'Cost-Efficiency',
         description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
+          'Having shared services means lower billables and more optimised workflows to manage expectations of all the projects being worked on.',
         icon: 'tabler:coin',
-      },
-      {
-        title: 'Instant Download',
-        description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
       },
     ]}
     image={{
@@ -170,42 +106,27 @@ const metadata = {
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Words from real customers"
+    title="Words from our customers"
     testimonials={[
       {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
+        testimonial: `Polar Packet has been an excellent data partner in helping us to setup our in depth data infrastructure and acting as an extension of our internal team, they have been able to help us be more data-centric which has in turn helped increase our growth and scalability in all areas through more informed and effective decision making.`,
+        name: 'Craig Goonting',
+        job: 'Troopers Innovation',
         image: {
           src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
           alt: 'Emily Kennedy Image',
         },
       },
       {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
-        name: 'Sarah Hansen',
-        job: 'Photographer',
+        testimonial: `Polar Packet has helped us smoothen the entire process from setting up our web analytics platform with careful planning and execution. Their meticulous design implementation on building the infrastructure has enabled many business capabilities. Having them onboard as out outsourced data team enabled us to reduce overhead acosts and for us to focus on bigger operational priorities`,
+        name: 'Samuel Chan',
+        job: 'House 730',
         image: {
           src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
           alt: 'Sarah Hansen Image',
         },
       },
-      {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
-        name: 'Mark Wilkinson',
-        job: 'Small business owner',
-        image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
-        },
-      },
     ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
   />
 
   <!-- CallToAction Widget *********** -->
@@ -214,11 +135,11 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
+        text: 'Get started now',
+        href: '/contact',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
+    title="Ready for your journey?"
+    subtitle="Join our community of satisfied customers who have transformed their businesses with us."
   />
 </Layout>

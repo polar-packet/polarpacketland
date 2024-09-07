@@ -11,7 +11,7 @@ metadata:
   title:
     default: AstroWind
     template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "Empowering businesses to scale with data engineering, advanced analytics, and AI solutions that drive automation, optimization, and growth."
   robots:
     index: true
     follow: true

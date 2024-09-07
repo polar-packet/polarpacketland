@@ -29,14 +29,14 @@ export const headerData = {
           text: 'Contact',
           href: getPermalink('/contact'),
         },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
+        // {
+        //   text: 'Terms',
+        //   href: getPermalink('/terms'),
+        // },
+        // {
+        //   text: 'Privacy policy',
+        //   href: getPermalink('/privacy'),
+        // },
       ],
     },
     // {
@@ -75,22 +75,22 @@ export const headerData = {
           text: 'Blog List',
           href: getBlogPermalink(),
         },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
+        // {
+        //   text: 'Article',
+        //   href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+        // },
+        // {
+        //   text: 'Article (with MDX)',
+        //   href: getPermalink('markdown-elements-demo-post', 'post'),
+        // },
+        // {
+        //   text: 'Category Page',
+        //   href: getPermalink('tutorials', 'category'),
+        // },
+        // {
+        //   text: 'Tag Page',
+        //   href: getPermalink('astro', 'tag'),
+        // },
       ],
     },
   ],
@@ -124,9 +124,9 @@ export const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About', href: 'blog' },
-        { text: 'Careers', href: '#' },
-    //     { text: 'Professional Services', href: '#' },
+        { text: 'About', href: '/about' },
+        { text: 'Services', href: '/services' },
+        // { text: 'Pricing', href: '/pricing' },
     //     { text: 'Skills', href: '#' },
     //     { text: 'Status', href: '#' },
       ],
@@ -135,8 +135,8 @@ export const footerData = {
       title: 'Polar Packet Sdn Bhd',
       links: [
         { text: '202101044216 (1444516-V)' },
-        { text: 'BPO data partner' },
-        { text: 'KL, Malaysia' },
+        // { text: 'BPO data partner' },
+        // { text: 'KL, Malaysia' },
         // { text: 'Careers', href: '#' },
         // { text: 'Press', href: '#' },
         // { text: 'Inclusion', href: '#' },

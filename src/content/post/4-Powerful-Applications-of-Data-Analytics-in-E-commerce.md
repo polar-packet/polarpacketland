@@ -1,5 +1,10 @@
 ---
 title: 4 Powerful Applications of Data Analytics in E-commerce
+excerpt: >-
+  Data analytics can help e-commerce businesses predict customer needs, optimize
+  pricing, personalize experiences, and recover lost sales. Polar Packet's
+  experts use data to boost your business performance and stay ahead of
+  competitors.
 publishDate: 2024-09-07T16:00:00.000Z
 image: /mark-konig-tl8mdaue_ii-unsplash.jpg
 category: news

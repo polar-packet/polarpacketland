@@ -46,6 +46,11 @@ export default defineConfig({
             label: "Body",
             isBody: true,
           },
+          {
+            type: 'datetime',
+            name: 'date',
+            label: 'publishDate'
+          },
         ],
       },
     ],

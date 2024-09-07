@@ -57,21 +57,20 @@ export default defineConfig({
             label: "Image",
           },
           {
-            type: "select",
+            type: "string",
             name: "category",
             label: "Category",
+            list: true,
             options: [
               { value: "news", label: "News" },
               { value: "documentation", label: "Documentation" },
             ],
           },
           {
-            type: "list",
+            type: "string",
             name: "tags",
             label: "Tags",
-            of: {
-              type: "string",
-            },
+            list: true,
             options: [
               { value: "data engineering", label: "Data Engineering" },
               { value: "data analytics", label: "Data Analytics" },

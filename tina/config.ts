@@ -57,6 +57,11 @@ export default defineConfig({
             label: "Publish Date",
           },
           {
+            type: "string",
+            name: "author",
+            label: "Author",
+          },
+          {
             type: "image",
             name: "image",
             label: "Image",

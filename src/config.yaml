@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: A BPO Data Agency
+  site: 'https://polarpacket.com'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
+    default: Polar Packet
+    template: ''
   description: "Empowering businesses to scale with data engineering, advanced analytics, and AI solutions that drive automation, optimization, and growth."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Polar Packet
     images:
       - url: '~/assets/images/default.png'
         width: 1200

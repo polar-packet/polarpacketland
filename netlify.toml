@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "npx tinacms build -c "npm run build"
+  command = "npx tinacms build -c "npm run build""
 [build.processing.html]
   pretty_urls = false
 [[headers]]

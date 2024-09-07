@@ -17,8 +17,8 @@ const metadata = {
 
   <HeroText
     tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
+    title="Services based on your maturity and needs"
+    subtitle="Choose the perfect plan that aligns with your goals."
   />
 
   <!-- Pricing Widget ******************* -->
@@ -28,91 +28,69 @@ const metadata = {
     subtitle="Only pay for what you need"
     prices={[
       {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
+        title: 'monthly',
+        subtitle: 'Getting to know us',
+        price: 3000,
         period: 'per month',
         items: [
           {
-            description: 'Etiam in libero, et volutpat',
+            description: 'Billed monthly',
           },
           {
-            description: 'Aenean ac nunc dolor tristique',
+            description: 'Provides 60 billiable hours per month',
           },
           {
-            description: 'Cras scelerisque accumsan lib',
+            description: 'Great for trial runs to test our synergy',
           },
           {
-            description: 'In hac habitasse',
+            description: 'Provides Engineering, Analytics and Data Science shared services',
+          },
+          {
+            description: 'Great for one off projects',
           },
         ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
       },
       {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
+        title: 'yearly',
+        subtitle: 'Partnerships',
+        price: 2850,
         period: 'Per Month',
         items: [
           {
-            description: 'Proin vel laoreet',
+            description: 'Billed at the start of the year',
           },
           {
-            description: 'Ut efficitur habitasse egestas',
+            description: 'You love our work! Make us your partners',
           },
           {
-            description: 'Volutpat hac curabitur',
-          },
-          {
-            description: 'Pellentesque blandit ut nibh',
-          },
-          {
-            description: 'Donec fringilla sem',
+            description: 'Everything else in Monthly and Quarterly',
           },
         ],
         callToAction: {
           target: '_blank',
           text: 'Get started',
-          href: '#',
+          href: '/contact',
         },
         hasRibbon: true,
         ribbonTitle: 'popular',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
+        title: 'Custom',
+        subtitle: 'Enterprise',
+        price: '3000+',
+        period: 'Reach out to us',
         items: [
           {
-            description: 'Curabitur suscipit risus',
-          },
-          {
-            description: 'Aliquam habitasse malesuada',
-          },
-          {
-            description: 'Suspendisse sit amet blandit',
-          },
-          {
-            description: 'Suspendisse auctor blandit dui',
+            description: 'Speak to our consultants for a tailored solution for your organisational needs',
           },
         ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
       },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
-  <Features3
+  <!Features3
     title="Price-related features"
     subtitle="Discover the advantages of choosing our plans"
     columns={2}
@@ -153,7 +131,7 @@ const metadata = {
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
+  <!Steps
     title="A guided journey from plans to creativity"
     tagline="simplified process"
     isReversed={true}
@@ -203,27 +181,27 @@ const metadata = {
       {
         title: 'Do the plans come with customer support?',
         description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+          'Absolutely, all plans include access to a dedicated success manager and a ticketing helpdesk to optimise requests.',
       },
       {
         title: 'Is there a trial period for the different plans?',
         description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+          "Unfortunately, we would have to suggest going for the Monthly billing option to test us out.",
       },
       {
         title: 'Can I switch between plans?',
         description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+          'Certainly! Let us know ahead of the billing cycle and we will manage expectations for the next cycle ahead.',
       },
       {
         title: 'What payment methods do you accept?',
         description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+          'We accept direct transfers, major credit cards and online payment methods to ensure a convenient and secure transaction process.',
       },
       {
         title: 'Are there any hidden fees beyond the displayed cost?',
         description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+          'No, the subscription cost covers all the features listed above aside from the necessary SST. There are no hidden fees or extra charges.',
       },
     ]}
   />
@@ -231,13 +209,13 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    title="Ready for your journey?"
+    subtitle="Join our community of satisfied customers who have transformed their businesses with us."
     actions={[
       {
         variant: 'primary',
         text: 'Get started now',
-        href: '/',
+        href: '/contact',
       },
     ]}
   />

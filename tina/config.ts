@@ -41,12 +41,6 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-          {
             type: "datetime",
             name: "publishDate",
             label: "Publish Date",
@@ -57,42 +51,10 @@ export default defineConfig({
             label: "Image",
           },
           {
-            type: "string",
-            name: "category",
-            label: "Category",
-            list: true,
-            options: [
-              { value: "news", label: "News" },
-              { value: "documentation", label: "Documentation" },
-            ],
-          },
-          {
-            type: "string",
-            name: "tags",
-            label: "Tags",
-            list: true,
-            options: [
-              { value: "data engineering", label: "Data Engineering" },
-              { value: "data analytics", label: "Data Analytics" },
-              { value: "data science", label: "Data Science" },
-            ],
-          },
-          {
-            type: "object",
-            name: "metadata",
-            label: "Metadata",
-            fields: [
-              {
-                type: "string",
-                name: "description",
-                label: "Description",
-              },
-              {
-                type: "string",
-                name: "keywords",
-                label: "Keywords",
-              },
-            ],
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
           },
         ],
       },

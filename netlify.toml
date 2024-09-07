@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "tinacms dev -c \"astro dev\""
+  command = "tinacms build -c \"npm run build""
 [build.processing.html]
   pretty_urls = false
 [[headers]]

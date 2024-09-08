@@ -83,7 +83,7 @@ export default defineConfig({
               options: [
                 {
                   value: "data engineering",
-                  label: "Data Egnineering"
+                  label: "Data Engineering"
                 }, {
                   value: "data analytics",
                   label: "Data Analytics"

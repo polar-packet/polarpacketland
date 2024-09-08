@@ -4,6 +4,18 @@ excerpt: "It’s rapidly transforming the healthcare industry. \U0001F525"
 publishDate: 2023-03-09T00:00:00.000Z
 image: /national-cancer-institute-nfvdkihxylu-unsplash.jpeg
 category: news
+metadata:
+  description: >-
+    This article explores how data analytics is revolutionizing the healthcare
+    industry by improving patient outcomes and reducing costs. It highlights
+    five key applications: clinical decision support, predictive analysis for
+    preventing chronic conditions, fraud detection in healthcare claims,
+    enhancing patient engagement, and leveraging data to improve public health
+    strategies.
+  keywords: >-
+    Healthcare data analytics, clinical decision support, predictive analysis,
+    patient outcomes, fraud detection, patient engagement, public health, cost
+    reduction in healthcare.
 ---
 
 Data analytics is rapidly transforming the healthcare industry, helping providers to improve patient outcomes and reduce costs.

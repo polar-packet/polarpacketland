@@ -6,7 +6,6 @@ excerpt: >-
 publishDate: 2022-10-19T00:00:00.000Z
 image: /stephen-dawson-qwtcej5clys-unsplash.jpeg
 category: documentation
-tags: data engineering
 metadata:
   description: >-
     This article details how Polar Packet assists clients in scaling their data

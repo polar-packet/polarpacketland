@@ -76,14 +76,22 @@ export default defineConfig({
             ],
           },
           {
-            type: "string",
-            name: "tags",
-            label: "Tags",
-            options: [
-              { value: "data engineering", label: "Data Engineering" },
-              { value: "data analytics", label: "Data Analytics" },
-              { value: "data science", label: "Data Science" },
-            ],
+            type: 'string',
+            name: 'tags',
+            label: 'Tags',
+            list: true,
+              options: [
+                {
+                  value: "data engineering",
+                  label: "Data Egnineering"
+                }, {
+                  value: "data analytics",
+                  label: "Data Analytics"
+                }, {
+                  value: "data science",
+                  label: "Data Science"
+                }
+              ]
           },
           {
             type: "object",

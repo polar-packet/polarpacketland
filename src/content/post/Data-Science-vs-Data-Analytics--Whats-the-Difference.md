@@ -4,6 +4,16 @@ excerpt: P.S. They’re two sides of the same coin
 publishDate: 2022-11-30T00:00:00.000Z
 image: /alexander-sinn-kgltfcgfc28-unsplash.jpg
 category: news
+metadata:
+  description: >-
+    This article explores the key differences between data science and data
+    analytics, detailing their roles in handling big data. It emphasizes the
+    strategic focus of data science and the problem-solving approach of data
+    analytics.
+  keywords: >-
+    data science, data analytics, big data, data processing, machine learning,
+    predictive modeling, data-driven innovation, data analysis, actionable
+    insights, data experts, Polar Packet
 ---
 
 Over the past decade, big data has completely transformed the world.

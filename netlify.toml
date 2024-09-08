@@ -1,7 +1,6 @@
 [build]
   publish = "dist"
   command = "npx tinacms build && npm run build"
-  optimize.assets = false
 [build.processing.html]
   pretty_urls = false
 [[headers]]

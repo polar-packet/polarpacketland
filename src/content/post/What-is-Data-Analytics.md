@@ -7,6 +7,18 @@ excerpt: >-
 publishDate: 2023-01-22T00:00:00.000Z
 image: /ux-indonesia-8mikj83lmsq-unsplash.jpg
 category: news
+metadata:
+  description: >-
+    This article explains the process and importance of data analytics,
+    highlighting its role in transforming raw data into actionable insights. It
+    covers the steps involved in data analytics, from data collection to the
+    presentation of findings, and introduces four key types of analytics:
+    descriptive, diagnostic, predictive, and prescriptive. It emphasizes how
+    companies can leverage data to inform decisions and drive business success.
+  keywords: >-
+    data analytics, raw data, data collection, descriptive analysis, diagnostic
+    analysis, predictive analysis, prescriptive analysis, business insights,
+    data-driven decisions, Polar Packet.
 ---
 
 As the world becomes increasingly reliant on technology and information, almost every company is collecting data all the time. But in its raw form, this data is incoherent.

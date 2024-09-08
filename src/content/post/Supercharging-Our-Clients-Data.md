@@ -6,6 +6,20 @@ excerpt: >-
 publishDate: 2022-10-19T00:00:00.000Z
 image: /stephen-dawson-qwtcej5clys-unsplash.jpeg
 category: news
+metadata:
+  description: >-
+    This article details how Polar Packet assists clients in scaling their data
+    capabilities by leveraging ELT processes and using BigQuery for data
+    transformation. It highlights how Google’s Looker Studio is utilized for
+    creating operational metrics and visualizations, as well as the challenges
+    faced when integrating QuickBooks data through custom pipelines. The article
+    also covers advanced analytics like cohort analysis and data science
+    applications for client segmentation, forecasting, and recommendation
+    engines.
+  keywords: >-
+    ELT, BigQuery, Looker Studio, QuickBooks, data pipeline, data
+    transformation, cohort analysis, data science, recommendation engine,
+    customer segmentation, Polar Packet.
 ---
 
 Recently, we are given the opportunity to help build and scale up the data capability of our client. We go over and beyond for our clients to make sure that the infrastructure built are scalable and easy to use. Being tool agnostic, we find best solutions for our clients to ensure that the needs of the company doesn't just end when a project is shipped.

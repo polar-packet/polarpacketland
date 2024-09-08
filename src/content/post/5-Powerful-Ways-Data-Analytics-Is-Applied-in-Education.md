@@ -6,6 +6,16 @@ excerpt: >-
 publishDate: 2023-04-02T00:00:00.000Z
 image: /alina-grubnyak-ziqkhi7417a-unsplash.jpeg
 category: news
+metadata:
+  description: >-
+    This article explores how data analytics is transforming education by
+    improving student performance, predicting outcomes, evaluating curriculum
+    effectiveness, identifying best practices, and optimizing resource
+    allocation to enhance learning experiences.
+  keywords: >-
+    data analytics, education, student performance, personalized learning,
+    curriculum evaluation, predictive analysis, best practices, resource
+    allocation, adaptive learning, student outcomes
 ---
 
 In today's data-driven world, the use of analytics has become increasingly important in many fields, including education.

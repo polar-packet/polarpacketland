@@ -2,10 +2,10 @@
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+const { inputs, textarea, disclaimer, button = 'Contact us', description = '', netlifyFormName = 'contact' } = Astro.props;
 ---
 
-<form>
+<form name={netlifyFormName} netlify>
   {
     inputs &&
       inputs.map(
@@ -46,6 +46,9 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
       </div>
     )
   }
+
+  {/* Add the honeypot field */}
+  <input type="text" name="website" style="display: none;" />
 
   {
     disclaimer && (

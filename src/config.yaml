@@ -3,7 +3,7 @@ site:
   site: 'https://polarpacket.com'
   base: '/'
   trailingSlash: false
-  favicon: '~/assets/favicons/favicon.png'
+  favicon: '/assets/favicons/favicon.png'
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 

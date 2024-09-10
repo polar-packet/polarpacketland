@@ -11,6 +11,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Brands from '~/components/widgets/Brands.astro';
 
 const metadata = {
   title: 'Polar Packet delivers scalable data solutions, empowering organizations with advanced analytics, AI, and expert consulting for data-driven success.',
@@ -43,6 +44,26 @@ const metadata = {
       
     </Fragment>
   </Hero>
+
+  <Brands
+    title="Partnerships & Collaborations"
+    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    icons={[]}
+    images={[
+      {
+        src: '~/assets/images/testimonial/brands-house730.png',
+        alt: 'house730',
+      },
+      {
+        src: '~/assets/images/testimonial/brands-seraigroup.png',
+        alt: 'serai',
+      },
+      {
+        src: '~/assets/images/testimonial/brands-troopers.png',
+        alt: 'troopers',
+      },
+    ]}
+  />
 
   <!-- Note Widget ******************* -->
 

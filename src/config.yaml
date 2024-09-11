@@ -19,7 +19,7 @@ metadata:
   openGraph:
     site_name: Polar Packet
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/logo_horizontal_white.png'
         width: 1200
         height: 628
     type: website

@@ -8,6 +8,7 @@ excerpt: >-
   a powerful, real-time customer recommendation engine.
 publishDate: 2025-11-02T16:00:00.000Z
 author: Darren
+image: /taylor-nicole-qH7nLsK_IjE-unsplash.jpg
 category: documentation
 tags:
   - data engineering

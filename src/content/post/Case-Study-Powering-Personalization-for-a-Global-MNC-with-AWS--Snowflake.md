@@ -1,11 +1,8 @@
 ---
 title: 'Case Study: Powering Personalization for a Global MNC with AWS & Snowflake'
 excerpt: >-
-  A global MNC had a classic problem: they were data-rich but insight-poor, with
-  customer data trapped in legacy silos across various subsidiaries. See how our
-  end-to-end Data Engineering, Data Analytics, and Data Science teams built a
-  unified platform on AWS and Snowflake to deliver a "Single Customer View" and
-  a powerful, real-time customer recommendation engine.
+  See how we transformed a global MNC's siloed data into a real-time customer
+  recommendation engine using AWS and Snowflake.
 publishDate: 2025-11-02T16:00:00.000Z
 author: Darren
 image: /taylor-nicole-qH7nLsK_IjE-unsplash.jpg

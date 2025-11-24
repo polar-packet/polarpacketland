@@ -47,7 +47,7 @@ The client's primary pain point was a lack of unified truth. Their digital platf
 
 * Siloed Systems: Inventory was separate from CRM, and Sales data was disconnected from Financials. This made calculating the true cost of customer acquisition or the profitability of specific listings nearly impossible.
 * Poor Market Insight: Analysts couldn't easily blend internal sales data with external market trends, leading to slow, reactive responses to shifts in property supply and demand.
-* Failing UX: The most critical tool—the user search bar—was rigid. Common user errors like misspellings, synonyms ("apartment" vs. "flat"), or fuzzy phrases resulted in zero results, prematurely ending the user journey and costing conversions.
+* Failing UX: The most critical tool, the user search bar, was rigid. Common user errors like misspellings, synonyms ("apartment" vs. "flat"), or fuzzy phrases resulted in zero results, prematurely ending the user journey and costing conversions.
 
 The platform was operating as a repository of listings, but not as a true System of Market Intelligence.
 

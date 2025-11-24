@@ -2,6 +2,13 @@
 title: >-
   Case Study: Unlocking Market Insights and Higher Conversions for a Leading
   Digital Property Platform
+excerpt: >-
+  A leading digital property platform had its market, sales, and inventory data
+  trapped in silos. See how our Data Engineering team built a scalable Data
+  Lakehouse on AWS/Snowflake, enabling rich Analytics views and deploying an
+  LLM-driven fuzzy search tool. This transformation eliminated friction,
+  provided crucial market insights, and significantly increased user conversion
+  rates.
 publishDate: 2025-11-23T16:00:00.000Z
 author: Ong Wei Juin
 image: /licensed-image.jpeg

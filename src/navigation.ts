@@ -29,10 +29,10 @@ export const headerData = {
           text: 'Contact',
           href: getPermalink('/contact'),
         },
-        // {
-        //   text: 'Terms',
-        //   href: getPermalink('/terms'),
-        // },
+        {
+          text: 'Careers',
+          href: getPermalink('/careers'),
+        },
         // {
         //   text: 'Privacy policy',
         //   href: getPermalink('/privacy'),
@@ -112,7 +112,7 @@ export const footerData = {
       ],
     },
     {
-      title: 'Medium',
+      title: 'Articles',
       links: [
         { text: 'Blog', href: 'blog' },
     //     { text: 'Partners', href: '#' },
@@ -126,7 +126,7 @@ export const footerData = {
       links: [
         { text: 'About', href: '/about' },
         { text: 'Services', href: '/services' },
-        // { text: 'Pricing', href: '/pricing' },
+        { text: 'Careers', href: '/careers' },
     //     { text: 'Skills', href: '#' },
     //     { text: 'Status', href: '#' },
       ],

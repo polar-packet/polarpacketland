@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CareerForm from '~/components/forms/CareerForm.astro';
+
+const metadata = {
+  title: 'Careers',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Careers"
+    title="Join Polar Packet"
+    subtitle="We're hiring across multiple roles. Come build data-driven solutions with us."
+    image={{
+      src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1740&q=80',
+      alt: 'Careers Hero Image',
+    }}
+  />
+
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold mb-6">Open Roles</h2>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="p-6 border rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Technical Data Consultant</h3>
+        <p class="text-sm text-muted-foreground">Helps clients untangle messy data problems, build reliable pipelines and make sense of their analytics needs. Works closely with engineering and business teams to design practical solutions, recommend the right tools and guide clients on how to scale their data capabilities with confidence.</p>
+      </article>
+
+      <article class="p-6 border rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Account Manager</h3>
+        <p class="text-sm text-muted-foreground">Builds and nurtures long term client relationships while ensuring every project runs smoothly. Acts as the main point of contact, keeps communication clear, understands client goals and coordinates internally so deliverables land on time with the level of quality clients expect.</p>
+      </article>
+
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">Apply Now</h2>
+      <p class="mb-6 text-muted-foreground">Fill in your details and upload your resume.</p>
+
+      <CareerForm />
+    </div>
+  </section>
+</Layout>

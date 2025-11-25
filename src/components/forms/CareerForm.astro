@@ -1,0 +1,56 @@
+---
+---
+<form id="career-form" class="space-y-4 max-w-xl" enctype="multipart/form-data">
+  <div>
+    <label for="name" class="block text-sm font-medium">Full name</label>
+    <input id="name" name="name" required class="mt-1 block w-full border rounded px-3 py-2" />
+  </div>
+
+  <div>
+    <label for="contact" class="block text-sm font-medium">Contact detail</label>
+    <input id="contact" name="contact" required class="mt-1 block w-full border rounded px-3 py-2" />
+  </div>
+
+  <div>
+    <label for="email" class="block text-sm font-medium">Email</label>
+    <input id="email" name="email" type="email" required class="mt-1 block w-full border rounded px-3 py-2" />
+  </div>
+
+  <div>
+    <label for="resume" class="block text-sm font-medium">Resume (PDF, DOC, DOCX)</label>
+    <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx" required class="mt-1 block w-full" />
+  </div>
+
+  <div>
+    <button type="submit" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded">Submit application</button>
+    <span id="form-status" class="ml-3 text-sm"></span>
+  </div>
+</form>
+
+<script type="module">
+  const form = document.getElementById('career-form');
+  const statusEl = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    statusEl.textContent = 'Uploading...';
+
+    const fd = new FormData(form);
+    try {
+      const res = await fetch('/api/upload-resume', {
+        method: 'POST',
+        body: fd
+      });
+      const json = await res.json();
+      if (res.ok && json.success) {
+        statusEl.textContent = 'Application submitted. Thank you.';
+        form.reset();
+      } else {
+        statusEl.textContent = json.error || 'Upload failed.';
+      }
+    } catch (err) {
+      statusEl.textContent = 'Network error.';
+      console.error(err);
+    }
+  });
+</script>

@@ -1,7 +1,6 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/Layout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import CareerForm from '~/components/forms/CareerForm.astro';
 
 const metadata = {
   title: 'Careers',
@@ -37,9 +36,16 @@ const metadata = {
 
     <div class="mt-12">
       <h2 class="text-2xl font-bold mb-4">Apply Now</h2>
-      <p class="mb-6 text-muted-foreground">Fill in your details and upload your resume.</p>
+      <p class="mb-6 text-muted-foreground">Click the button below to email your application. Please attach your resume/CV to the email.</p>
 
-      <CareerForm />
+      <!-- Mailto button -->
+      <a
+        class="inline-flex items-center px-4 py-2 bg-primary text-white rounded"
+        href="mailto:talent@polarpacket.com?subject=Careers%20Application&body=Name%3A%0ALocation%3A%0AContact%20Number%3A%0AEmail%3A%0ACover%20Letter%3A%0A%0APlease%20attach%20your%20resume%2F%20CV%20to%20the%20email."
+        rel="noopener noreferrer"
+      >
+        Apply now
+      </a>
     </div>
   </section>
 </Layout>

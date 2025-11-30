@@ -1,0 +1,52 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+const metadata = {
+  title: 'Data Intern',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Careers"
+    title="Data Intern"
+    subtitle="Join our team and learn the ropes."
+  />
+
+    <section class="max-w-4xl mx-auto px-6 py-12">
+      <div class="prose max-w-none">
+        <h2>About the Role</h2>
+        <p>
+          The Data Consultant Intern role is a great starting point for anyone looking to learn how real data systems are built and used in fast moving businesses. You will work alongside our consultants and engineers to support client projects, explore modern data tools and help turn raw information into something clean, structured and useful. This is a hands on internship where you will get to see how data engineering, analytics and light ML support come together in practice.
+        </p>
+
+        <h3>Responsibilities</h3>
+        <p>
+          You will assist with building and testing simple data pipelines, help investigate data quality issues and support the integration of datasets from various sources. You will take part in basic analytics tasks, learn how dashboards are built and contribute to documentation and troubleshooting efforts. Over time you will get exposure to cloud tools, database management and the core building blocks of a modern data stack while being guided by our team.
+        </p>
+
+        <h3>What We're Looking For</h3>
+        <p>
+          We are looking for someone curious, willing to learn and comfortable working through technical challenges. A basic understanding of SQL or Python is helpful, along with an interest in data engineering, analytics or cloud platforms. You do not need to know everything on day one but you should enjoy problem solving, stay attentive to details and communicate clearly when working with the team.
+        </p>
+
+        <h3>Why Join Us</h3>
+        <p>
+          You will get real exposure to how data consulting works, take part in meaningful projects and grow your skills quickly with guidance from experienced team members. You will learn modern tools, deepen your technical foundation and gain experience that will help you move into full time data roles. It is a friendly, supportive environment where curiosity and initiative go a long way.
+        </p>
+      </div>
+    </section>
+
+      <div class="mt-8">
+        <a
+          class="inline-flex items-center px-4 py-2 bg-primary text-white rounded"
+          href="mailto:talent@polarpacket.com?subject=Polar%20Packet%20Sdn%20Bhd%20Application%20for%20Technical%20Data%20Consultant&body=Name%3A%0ALocation%3A%0AContact%20Number%3A%0AEmail%3A%0ACover%20Letter%3A%0A%0APlease%20attach%20your%20resume%2F%20CV%20to%20the%20email."
+          rel="noopener noreferrer"
+        >
+          Apply now
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -126,5 +126,5 @@ If your organization has ambitious data goals and needs both the leadership to c
 
 Ready to gain strategic leadership and execution power instantly? [Contact us today for a consultation](https://polarpacket.com/contact), or explore more of our strategic guidance in these relevant articles:
 
-* Strategy (The CDO Role): [From Data to Strategy: A C-Suite Guide to Data-Driven Transformation](https://www.google.com/search?q=https://polarpacket.com/from-data-to-strategy-a-c-suite-guide-to-data-driven-transformation)
+* Strategy (The CDO Role): [From Data to Strategy: A C-Suite Guide to Data-Driven Transformation](https://polarpacket.com/from-data-to-strategy-a-c-suite-guide-to-data-driven-transformation)
 * Execution (The Team): [Case Study: Powering Personalization for a Global MNC with AWS & Snowflake](https://polarpacket.com/case-study-powering-personalization-for-a-global-mnc-with-aws-snowflake)

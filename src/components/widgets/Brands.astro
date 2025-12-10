@@ -5,6 +5,7 @@ import type { Brands as Props } from '~/types';
 import Image from '~/components/common/Image.astro';
 import Headline from '~/components/ui/Headline.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
 const {
   title = '',
   subtitle = '',
@@ -16,23 +17,69 @@ const {
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+const hasImages = images && images.length > 0;
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
-  <div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24">
-    {icons && icons.map((icon) => <Icon name={icon} class="py-3 lg:py-5 w-12 h-auto mx-auto sm:mx-0 text-gray-500" />)}
-    {
-      images &&
-        images.map(
-          (image) =>
-            image.src && (
-              <div class="flex justify-center col-span-1 my-2 lg:my-4 py-1 px-1 rounded-md dark:bg-white">
-                <Image src={image.src} alt={image.alt || ''} class="max-h-25" width={120} height={120} layout="fixed" />
-              </div>
-            )
-        )
-    }
-  </div>
+  {hasImages ? (
+    <div class="relative w-full overflow-hidden">
+      {/* Carousel container */}
+      <div class="carousel-wrapper overflow-hidden">
+        <div class="carousel-track flex gap-6 sm:gap-12 lg:gap-24 animate-scroll">
+          {/* Original images */}
+          {images.map(
+            (image) =>
+              image.src && (
+                <div class="flex-shrink-0 flex justify-center col-span-1 my-2 lg:my-4 py-1 px-1 rounded-md dark:bg-white">
+                  <Image src={image.src} alt={image.alt || ''} class="max-h-25" width={120} height={120} layout="fixed" />
+                </div>
+              )
+          )}
+          {/* Duplicate images for seamless loop */}
+          {images.map(
+            (image) =>
+              image.src && (
+                <div class="flex-shrink-0 flex justify-center col-span-1 my-2 lg:my-4 py-1 px-1 rounded-md dark:bg-white">
+                  <Image src={image.src} alt={image.alt || ''} class="max-h-25" width={120} height={120} layout="fixed" />
+                </div>
+              )
+          )}
+        </div>
+      </div>
+    </div>
+  ) : (
+    <div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24">
+      {icons && icons.map((icon) => <Icon name={icon} class="py-3 lg:py-5 w-12 h-auto mx-auto sm:mx-0 text-gray-500" />)}
+    </div>
+  )}
 </WidgetWrapper>
+
+<style>
+  .carousel-wrapper {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track {
+    width: max-content;
+    animation: scroll 30s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - 1.5rem));
+    }
+  }
+
+  /* Pause on hover */
+  .carousel-wrapper:hover .carousel-track {
+    animation-play-state: paused;
+  }
+
+  /* Optional: adjust speed by changing duration (30s) */
+</style>

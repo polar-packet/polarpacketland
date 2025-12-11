@@ -136,7 +136,7 @@ export const footerData = {
       links: [
         { text: '202101044216 (1444516-V)' },
         // { text: 'BPO data partner' },
-        { text: 'D2-1-9, 1, Jln Dutamas 1, Solaris Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur' },
+        { text: 'D2-1-9, 1, Jln Dutamas 1, Solaris Dutamas, 50480 Kuala Lumpur, MY' },
         // { text: 'Careers', href: '#' },
         // { text: 'Press', href: '#' },
         // { text: 'Inclusion', href: '#' },

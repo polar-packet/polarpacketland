@@ -1,5 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getCanonical } from '~/utils/permalinks';
 
 import type { MetaData } from '~/types';
 
@@ -8,6 +10,8 @@ export interface Props {
     title?: string;
     description?: string;
     image?: string;
+    author?: string;
+    publishDate?: string | Date;
   };
 }
 
@@ -26,9 +30,26 @@ const metadata: MetaData = {
     ],
   } : undefined,
 };
+
+const canonical = String(getCanonical(String(Astro.url.pathname)));
+const imageUrl = frontmatter?.image ? new URL(String(frontmatter.image), SITE.site).toString() : undefined;
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonical },
+  "headline": frontmatter?.title ?? '',
+  "description": frontmatter?.description ?? '',
+  "url": canonical,
+  ...(imageUrl ? { image: [imageUrl] } : {}),
+  ...(frontmatter?.author ? { author: { "@type": "Person", "name": String(frontmatter.author) } } : {}),
+  ...(frontmatter?.publishDate ? { datePublished: new Date(String(frontmatter.publishDate)).toISOString() } : {}),
+};
 ---
 
 <Layout metadata={metadata}>
+  <!-- JSON-LD (Article) - uses frontmatter dynamically for each post -->
+  <script type="application/ld+json" set:html={JSON.stringify(ld)}></script>
+
   <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
     <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">{frontmatter.title}</h1>
     <div

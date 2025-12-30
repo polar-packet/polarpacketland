@@ -72,12 +72,11 @@ const {
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="mx-auto rounded-md w-full"
+                  class="mx-auto rounded-md w-full h-auto object-contain max-h-[600px] sm:max-h-[420px]"
                   widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, 1024px"
                   loading="eager"
                   width={1024}
-                  height={576}
                   {...image}
                 />
               )}

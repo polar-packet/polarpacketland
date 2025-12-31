@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { SITE, METADATA } from 'astrowind:config';
-import DnbSealAuto from './DnbSealAuto.astro';
+import DnbSeal from './DnbSeal.astro';
 import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
@@ -55,7 +55,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           <p class="mt-3 text-sm text-muted max-w-xs">{METADATA?.description}</p>
         ) : null}
         <div class="mt-4">
-          <DnbSealAuto cid="1" badgeUrl="/assets/images/dnb-badge.png" width={114} height={97} />
+          <DnbSeal cid="1" width={114} height={97} />
         </div>
       </div>
       {

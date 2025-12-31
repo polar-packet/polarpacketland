@@ -18,10 +18,11 @@ const {
   title = 'D&B Seal',
   class: className = '',
   sandbox = '', // pass e.g., 'allow-same-origin allow-scripts' if needed, or '' for none
-  ariaLabel = 'Dun & Bradstreet verification seal'
+  ariaLabel = 'Dun & Bradstreet verification seal',
+  fallbackHref = 'https://www.dnb.com'
 } = Astro.props;
 
-const src = `https://dunsregistered.dnb.com/SealAuthentication.aspx?Cid=${cid}`;
+const src = `https://dunsregistered.dnb.com/SealAuthentication.aspx?Cid=${cid}`; // iframe source remains the vendor seal endpoint
 ---
 
 <aside class={className} aria-label={ariaLabel}>
@@ -41,10 +42,10 @@ const src = `https://dunsregistered.dnb.com/SealAuthentication.aspx?Cid=${cid}`;
   >
   </iframe>
 
-  <!-- noscript fallback: link to D&B verification page -->
+  <!-- noscript fallback: link to a stable D&B page (avoid linking directly to SealAuthentication.aspx which may be down) -->
   <noscript>
     <div>
-      <a href={src} target="_blank" rel="noopener noreferrer">Verify at D&amp;B</a>
+      <a href={fallbackHref} target="_blank" rel="noopener noreferrer">Verify at D&amp;B</a>
     </div>
-  </noscript>
+  </noscript>  
 </aside>

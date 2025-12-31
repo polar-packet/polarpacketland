@@ -1,0 +1,130 @@
+---
+// DnbSealAuto.astro
+// Auto-detecting wrapper for the D&B seal.
+// Behavior:
+//  - At build time, performs a short (3s) server-side check to see if the D&B seal URL responds (HEAD/GET)
+//  - If the check passes, it renders the iframe; otherwise it renders the static badge fallback (DnbSealStatic)
+//  - On the client, if the iframe doesn't finish loading within 5s, the component automatically replaces it with the static badge
+
+import DnbSealStatic from './DnbSealStatic.astro';
+
+const {
+  cid = '1',
+  width = 114,
+  height = 97,
+  loading = 'lazy',
+  title = 'D&B Seal',
+  class: className = '',
+  sandbox = '',
+  badgeUrl = '',
+  alt = 'Dun & Bradstreet Verified'
+} = Astro.props;
+
+const src = `https://dunsregistered.dnb.com/SealAuthentication.aspx?Cid=${cid}`;
+
+// Build-time reachability check with a short timeout
+let showIframe = false;
+const TIMEOUT_MS = 3000;
+try {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  // Use HEAD where possible to avoid pulling full body; some servers may reject HEAD so fallback to GET
+  let res;
+  try {
+    res = await fetch(src, { method: 'HEAD', signal: controller.signal });
+    if (res && !res.ok) {
+      // try GET as fallback
+      res = await fetch(src, { method: 'GET', signal: controller.signal });
+    }
+  } catch (e) {
+    // If HEAD failed due to method not allowed or other error, try GET once
+    try {
+      res = await fetch(src, { method: 'GET', signal: controller.signal });
+    } catch (e2) {
+      res = null;
+    }
+  }
+  clearTimeout(timeout);
+  showIframe = !!res && res.ok;
+} catch (e) {
+  showIframe = false;
+}
+---
+
+<div class={className} id={`dnb-seal-wrapper-${cid}`} aria-label="Dun & Bradstreet seal" data-src={src} data-badge={badgeUrl} data-alt={alt} data-width={String(width)} data-height={String(height)} data-cid={String(cid)}>
+  {showIframe ? (
+    <iframe
+      id={`dnb-iframe-${cid}`}
+      src={src}
+      width={String(width)}
+      height={String(height)}
+      frameborder="0"
+      scrolling="no"
+      allowtransparency="true"
+      loading={loading}
+      title={title}
+      sandbox={sandbox || undefined}
+      style="border:0;"
+    >
+    </iframe>
+  ) : (
+    <DnbSealStatic href={src} badgeUrl={badgeUrl} alt={alt} width={width} height={height} />
+  )}
+
+  <script type="module">
+    // Client-side fallback: if iframe doesn't finish loading within 5s, replace with static badge
+    (function () {
+      try {
+        const scriptEl = document.currentScript;
+        const wrapper = scriptEl ? scriptEl.parentElement : null;
+        if (!wrapper) return;
+        const iframe = wrapper.querySelector('iframe');
+        if (!iframe) return; // nothing to do if we already rendered static fallback
+
+        const data = wrapper.dataset || {};
+        const src = data.src || '';
+        const badge = data.badge || '';
+        const alt = data.alt || 'Dun & Bradstreet Verified';
+        const w = data.width ? Number(data.width) : undefined;
+        const h = data.height ? Number(data.height) : undefined;
+
+        let loaded = false;
+        const onLoad = function () {
+          loaded = true;
+          clearTimeout(timer);
+          iframe.removeEventListener('load', onLoad);
+        };
+        iframe.addEventListener('load', onLoad);
+
+        const timer = setTimeout(function () {
+          if (!loaded) {
+            // Build static fallback element
+            const a = document.createElement('a');
+            a.href = src;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+
+            if (badge) {
+              const img = document.createElement('img');
+              img.src = badge;
+              img.alt = alt;
+              img.loading = 'lazy';
+              if (w) img.width = w;
+              if (h) img.height = h;
+              a.appendChild(img);
+            } else {
+              a.textContent = alt;
+            }
+
+            // replace wrapper contents with the fallback
+            wrapper.innerHTML = '';
+            wrapper.appendChild(a);
+          }
+        }, 5000);
+      } catch (e) {
+        // Fail silently; do not break the page if the script errors
+        console.error('DnbSealAuto client fallback error:', e);
+      }
+    })();
+  </script>
+</div>

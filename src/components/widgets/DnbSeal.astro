@@ -1,0 +1,50 @@
+---
+// DnbSeal.astro
+// Simple, safe iframe embed for the D&B seal.
+// Usage:
+//   ---
+//   import DnbSeal from '../widgets/DnbSeal.astro'
+//   ---
+//   <DnbSeal cid="1" width={114} height={97} loading="lazy" title="D&B Seal" />
+// Notes:
+// - Test on staging first. The iframe content is controlled by D&B and may set cookies or load additional resources.
+// - Avoid using the vendor's `document.write` script; this component embeds a plain <iframe> instead.
+
+const {
+  cid = '1',
+  width = 114,
+  height = 97,
+  loading = 'lazy',
+  title = 'D&B Seal',
+  class: className = '',
+  sandbox = '', // pass e.g., 'allow-same-origin allow-scripts' if needed, or '' for none
+  ariaLabel = 'Dun & Bradstreet verification seal'
+} = Astro.props;
+
+const src = `https://dunsregistered.dnb.com/SealAuthentication.aspx?Cid=${cid}`;
+---
+
+<aside class={className} aria-label={ariaLabel}>
+  <!-- The iframe intentionally uses an explicit src to avoid document.write and allow better control -->
+  <iframe
+    id={`DnbSeal-${cid}`}
+    src={src}
+    width={String(width)}
+    height={String(height)}
+    frameborder="0"
+    scrolling="no"
+    allowtransparency="true"
+    loading={loading}
+    title={title}
+    sandbox={sandbox || undefined}
+    style="border:0;"
+  >
+  </iframe>
+
+  <!-- noscript fallback: link to D&B verification page -->
+  <noscript>
+    <div>
+      <a href={src} target="_blank" rel="noopener noreferrer">Verify at D&amp;B</a>
+    </div>
+  </noscript>
+</aside>

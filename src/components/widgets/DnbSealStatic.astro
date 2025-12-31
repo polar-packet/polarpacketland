@@ -1,0 +1,26 @@
+---
+// DnbSealStatic.astro
+// Lightweight privacy-first fallback: an image badge (host locally or use vendor-provided URL)
+// Usage:
+//  ---
+//  import DnbSealStatic from '../widgets/DnbSealStatic.astro'
+//  ---
+//  <DnbSealStatic href="https://dunsregistered.dnb.com/SealAuthentication.aspx?Cid=1" badgeUrl="/assets/images/dnb-badge.png" alt="D&B Verified" />
+
+const {
+  href = 'https://dunsregistered.dnb.com/SealAuthentication.aspx?Cid=1',
+  badgeUrl = '',
+  alt = 'Dun & Bradstreet Verified',
+  width = undefined,
+  height = undefined,
+  class: className = ''
+} = Astro.props;
+---
+
+<a class={className} href={href} target="_blank" rel="noopener noreferrer">
+  {badgeUrl ? (
+    <img src={badgeUrl} alt={alt} width={width} height={height} loading="lazy" />
+  ) : (
+    <span>{alt}</span>
+  )}
+</a>

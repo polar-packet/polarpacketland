@@ -10,6 +10,9 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "generate:redirects": "node ./scripts/generate-redirects.mjs",
+    "list:slugs": "node ./scripts/list-post-slugs.mjs",
+    "prebuild": "npm run generate:redirects",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",

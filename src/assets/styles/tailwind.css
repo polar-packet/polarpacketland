@@ -90,3 +90,47 @@
 .dd *:first-child {
   margin-top: 0;
 }
+
+/* Tina admin UI tweaks: scope styles to pages under /admin to avoid affecting main site */
+.tina-admin {
+  /* prevent unnecessary horizontal scrolling in Tina UI */
+  overflow-x: hidden;
+}
+
+/* Make any buttons inside Tina admin slightly smaller so they fit within tight admin headers */
+.tina-admin button,
+.tina-admin .btn,
+.tina-admin input[type="button"],
+.tina-admin input[type="submit"] {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .tina-admin button,
+  .tina-admin .btn,
+  .tina-admin input[type="button"],
+  .tina-admin input[type="submit"] {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Ensure admin panels won't be constrained by site layout and will stay within viewport */
+.tina-admin .tina__root,
+.tina-admin .tina,
+.tina-admin .tina-app,
+.tina-admin .tina-panel,
+.tina-admin .tina__content,
+.tina-admin .content,
+.tina-admin .container {
+  max-width: 100% !important;
+  box-sizing: border-box;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+/* Give a small padding for safe alignment on small screens */
+.tina-admin .tina__content {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}

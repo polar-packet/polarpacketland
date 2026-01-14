@@ -31,6 +31,16 @@ import { UI } from 'astrowind:config';
   };
   initTheme();
 
+  // Add a class when we're inside the Tina admin so we can scope admin-only styles
+  try {
+    if (typeof window !== 'undefined' && window.location && window.location.pathname && window.location.pathname.indexOf('/admin') === 0) {
+      document.documentElement.classList.add('tina-admin');
+      document.body.classList.add('tina-admin');
+    }
+  } catch (e) {
+    /* ignore */
+  }
+
   function attachEvent(selector, event, fn) {
     const matches = typeof selector === 'string' ? document.querySelectorAll(selector) : selector;
     if (matches && matches.length) {
